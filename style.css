@@ -1,79 +1,125 @@
-body {
-    font-family: Arial, sans-serif;
+/* RESET */
+body, h1, h2, p, ul, li, a, button, input, textarea {
     margin: 0;
     padding: 0;
-    line-height: 1.6;
+    box-sizing: border-box;
 }
 
+/* BODY */
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background: #f9f9f9;
+    color: #333;
+}
+
+/* HEADER */
 header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
     background: #4CAF50;
     color: white;
-    padding: 1em 0;
-    text-align: center;
 }
 
-header h1 {
-    margin: 0;
+header .logo {
+    font-size: 1.5em;
+    font-weight: bold;
 }
 
-nav ul {
+header nav ul {
+    display: flex;
     list-style: none;
-    padding: 0;
 }
 
-nav ul li {
-    display: inline;
-    margin: 0 10px;
+header nav ul li {
+    margin-left: 15px;
 }
 
-nav ul li a {
+header nav ul li a {
     color: white;
     text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
 }
 
-main {
+header nav ul li a:hover {
+    color: #FFD700;
+}
+
+/* HERO SECTION */
+.hero {
+    background: url('hero-bg.jpg') no-repeat center center/cover;
+    color: white;
+    text-align: center;
+    padding: 100px 20px;
+}
+
+.hero-content {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.hero h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.hero .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #FFD700;
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+/* SECTIONS */
+.section {
+    padding: 50px 20px;
+    text-align: center;
+    background: white;
+    margin: 20px 0;
+}
+
+.section:nth-child(even) {
+    background: #f2f2f2;
+}
+
+.cards {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.card {
+    background: white;
     padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 300px;
 }
 
-section {
-    margin-bottom: 30px;
+.card h3 {
+    margin-bottom: 10px;
 }
 
+.card .btn {
+    margin-top: 10px;
+    padding: 10px;
+    background: #4CAF50;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+/* FOOTER */
 footer {
     background: #333;
     color: white;
     text-align: center;
     padding: 10px 0;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-}
-
-form {
-    display: flex;
-    flex-direction: column;
-    max-width: 400px;
-    margin: auto;
-}
-
-form label {
-    margin: 10px 0 5px;
-}
-
-form input, form textarea, form button {
-    padding: 10px;
-    margin-bottom: 10px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-}
-
-form button {
-    background: #4CAF50;
-    color: white;
-    border: none;
-    cursor: pointer;
-}
-
-form button:hover {
-    background: #45a049;
 }
