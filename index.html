@@ -3,74 +3,83 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Professeur de Lycée - Accueil</title>
+    <title>Professeur de Lycée - M. Dupont</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
-        <h1>Bienvenue sur le site de M. Dupont</h1>
+        <div class="logo">M. Dupont</div>
         <nav>
             <ul>
-                <li><a href="#accueil">Accueil</a></li>
+                <li><a href="#home">Accueil</a></li>
                 <li><a href="#cours">Cours</a></li>
-                <li><a href="#ressources">Ressources</a></li>
-                <li><a href="#annonces">Annonces</a></li>
+                <li><a href="#actualites">Actualités</a></li>
+                <li><a href="#galerie">Galerie</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
     </header>
 
-    <main>
-        <section id="accueil">
-            <h2>Accueil</h2>
-            <p>Bienvenue sur mon site. Ici, vous trouverez toutes les informations sur mes cours, des ressources utiles, et des annonces importantes.</p>
-        </section>
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Bienvenue sur le site de M. Dupont</h1>
+            <p>Enseignant en mathématiques et physique pour les classes de lycée.</p>
+            <a href="#contact" class="btn">Me contacter</a>
+        </div>
+    </section>
 
-        <section id="cours">
-            <h2>Mes Cours</h2>
-            <ul>
-                <li>Mathématiques - Terminale</li>
-                <li>Physique - Première</li>
-                <li>Sciences - Seconde</li>
-            </ul>
-        </section>
+    <section id="cours" class="section">
+        <h2>Mes Cours</h2>
+        <div class="cards">
+            <div class="card">
+                <h3>Mathématiques - Terminale</h3>
+                <p>Retrouvez les cours et exercices pour la terminale.</p>
+                <a href="programme_terminal.pdf" class="btn">Télécharger</a>
+            </div>
+            <div class="card">
+                <h3>Physique - Première</h3>
+                <p>Documents et fiches de révision pour la première.</p>
+                <a href="exercices_premiere.pdf" class="btn">Télécharger</a>
+            </div>
+        </div>
+    </section>
 
-        <section id="ressources">
-            <h2>Ressources</h2>
-            <p>Téléchargez des documents utiles :</p>
-            <ul>
-                <li><a href="programme_terminal.pdf" download>Programme Terminale</a></li>
-                <li><a href="exercices_premiere.pdf" download>Exercices Première</a></li>
-            </ul>
-        </section>
+    <section id="actualites" class="section">
+        <h2>Actualités</h2>
+        <ul class="news">
+            <li>Prochain contrôle : Mathématiques le 12/12/2024.</li>
+            <li>Conférence scientifique le 20/12/2024 en salle B12.</li>
+            <li>Vacances de Noël : du 23/12/2024 au 7/01/2025.</li>
+        </ul>
+    </section>
 
-        <section id="annonces">
-            <h2>Annonces</h2>
-            <p>Aucune annonce pour le moment.</p>
-        </section>
+    <section id="galerie" class="section">
+        <h2>Galerie</h2>
+        <div class="gallery">
+            <img src="img1.jpg" alt="Cours en classe">
+            <img src="img2.jpg" alt="Tableau noir avec équations">
+            <img src="img3.jpg" alt="Élèves au laboratoire">
+        </div>
+    </section>
 
-        <section id="contact">
-            <h2>Contact</h2>
-            <form id="contactForm">
-                <label for="name">Nom :</label>
-                <input type="text" id="name" name="name" required>
-
-                <label for="email">Email :</label>
-                <input type="email" id="email" name="email" required>
-
-                <label for="message">Message :</label>
-                <textarea id="message" name="message" required></textarea>
-
-                <button type="submit">Envoyer</button>
-            </form>
-            <p id="responseMessage"></p>
-        </section>
-    </main>
+    <section id="contact" class="section contact-section">
+        <h2>Contactez-moi</h2>
+        <form action="submit_form" method="POST">
+            <label for="name">Nom :</label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="email">Email :</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="message">Message :</label>
+            <textarea id="message" name="message" required></textarea>
+            
+            <button type="submit" class="btn">Envoyer</button>
+        </form>
+    </section>
 
     <footer>
         <p>© 2024 M. Dupont - Tous droits réservés</p>
     </footer>
-
-    <script src="script.js"></script>
 </body>
 </html>
